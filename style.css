@@ -1,0 +1,114 @@
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(#7597de, rgb(45, 9, 78));
+}
+
+.texter{
+   left:0;
+   max-width: 1000px;
+   background: linear-gradient(#7597de, rgb(45, 9, 78));
+}
+.texter::before{
+    content: '';
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #7597de, transparent);
+
+}
+
+.keyart{
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height:100vh;
+    overflow-y:auto;
+    overflow-x: hidden;
+    perspective: 20px;
+
+}
+
+.images{ 
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:top center;
+    transform-style: preserve-3d;
+}
+
+#logo{
+    color:#fff;
+    font-weight:bolder;
+    text-decoration: none; 
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: #7597de;
+    float: left;
+   
+}
+#ul{
+   text-align: right;
+   background-color: #7597de;
+   margin-right: 10%;
+}
+#ul li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 20px;
+       
+}
+#ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;  
+    border-radius: 20px;
+}
+#ul li a:hover,
+#ul li a.active{ 
+    background-color: #fff;
+    color:rgb(45, 9, 78);
+}
+
+#back-ground{
+    width: 100vw;
+    height: 100%;
+    object-fit: fill;
+    position: fixed;
+    background-image: url(3.png); 
+    transform: translateZ(-20px) scale(2);
+}
+#mid-ground{
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    margin-top: 30%;
+    background-image: url(2.png);  
+    transform: translateZ(-10px) scale(1.5);       
+}
+#fore-ground{
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    object-fit: cover;
+    margin-top: 50%; 
+    background-image: url(1.png);  
+
+}
+@media screen and (max-width: 800px){
+    #back-ground{
+        background-image: url(6.png); 
+    }
+    #mid-ground{
+        margin-top: 20%; 
+        background-image: url(5.png); 
+    }
+    #fore-ground{
+        margin-top: 40%; 
+        background-image: url(4.png); 
+    }
+}
+
